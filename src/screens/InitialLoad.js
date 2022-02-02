@@ -15,20 +15,8 @@ export default function InitialLoad() {
 
     return (
         <>
-            <div className="text-container">
-                <Title />
-            </div>
-            <motion.div
-                animate={{ y: [0, -25, 25] }}
-                transition={{
-                    duration: 3,
-                    delay: 1,
-                    repeat: Infinity,
-                    repeatType: "mirror",
-                }}
-            >
-                <Cube isFinished={isFinished} />
-            </motion.div>
+            <Title isFinished={isFinished} />
+            <Cube isFinished={isFinished} />
         </>
     );
 }

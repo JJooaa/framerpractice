@@ -9,10 +9,14 @@ const Cube = ({ isFinished }) => {
                 <motion.div
                     initial={{ y: "-100vh", opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 2, type: "spring", delay: 1 }}
+                    transition={
+                        isFinished === false
+                            ? { duration: 2, type: "spring", delay: 1 }
+                            : { duration: 2, type: "spring" }
+                    }
                     class="container"
                     drag={true}
-                    exit={{ opacity: 0 }}
+                    exit={{ y: "100vh" }}
                 >
                     <div class="cube">
                         <div class="face top"></div>

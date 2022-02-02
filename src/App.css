@@ -75,7 +75,7 @@
 
 .text-container {
     width: 500px;
-    height: 100px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
