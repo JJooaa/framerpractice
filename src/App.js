@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import Page2 from "./page2";
+import Page1 from "./page1";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [animation, setAnimation] = useState(false);
+    const [page, setPage] = useState(0);
+
+    return <div className="App">{page === 0 ? <Page2 /> : <Page1 />}</div>;
 }
 
 export default App;
