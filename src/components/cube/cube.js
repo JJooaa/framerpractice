@@ -1,33 +1,49 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./cube.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { CurrentScreenContext } from "../../App";
 
-const Cube = ({ isFinished }) => {
+const Cube = ({ isFinished, isCubeFinished }) => {
+    const [currentScreen, setCurrentScreen] = useContext(CurrentScreenContext);
+
     return (
         <AnimatePresence>
-            {isFinished === false ? (
+            {currentScreen === "initial-load" && isCubeFinished === false ? (
                 <motion.div
                     initial={{ y: "-100vh", opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    transition={
-                        isFinished === false
-                            ? { duration: 2, type: "spring", delay: 1 }
-                            : { duration: 2, type: "spring" }
-                    }
-                    class="container"
-                    drag={true}
-                    exit={{ y: "100vh" }}
+                    transition={{ duration: 2, type: "spring" }}
+                    className="container"
+                    exit={{ y: "200vh" }}
                 >
-                    <div class="cube">
-                        <div class="face top"></div>
-                        <div class="face bottom"></div>
-                        <div class="face left"></div>
-                        <div class="face right"></div>
-                        <div class="face front"></div>
-                        <div class="face back"></div>
+                    <div className="cube">
+                        <div className="face top"></div>
+                        <div className="face bottom"></div>
+                        <div className="face left"></div>
+                        <div className="face right"></div>
+                        <div className="face front"></div>
+                        <div className="face back"></div>
                     </div>
                 </motion.div>
             ) : null}
+            {currentScreen === "second-load" && (
+                <motion.div
+                    initial={{ x: "-200vh", opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 2, type: "spring" }}
+                    className="container"
+                    exit={{ x: "-200vh" }}
+                >
+                    <div className="cube">
+                        <div className="face top"></div>
+                        <div className="face bottom"></div>
+                        <div className="face left"></div>
+                        <div className="face right"></div>
+                        <div className="face front"></div>
+                        <div className="face back"></div>
+                    </div>
+                </motion.div>
+            )}
         </AnimatePresence>
     );
 };

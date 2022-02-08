@@ -1,16 +1,38 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import InitialLoad from "./screens/InitialLoad";
+import SecondLoad from "./screens/secondLoad";
+import { createContext } from "react";
+import Timer from "./components/timer/timer";
+
+export const CurrentScreenContext = createContext();
 
 function App() {
     /* Will create the flow of the page here. Transitioning from screen to screen
-    with cool animations */
-    const [currentScreen, setCurrentScreen] = useState(0);
+    with animations */
+
+    /* 
+    currentScreen will take  4-5 different states of which we will render the proper content 
+    also this will play a major role in positioning of the cube 
+    */
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setCurrentScreen("somethingelse");
+    //     }, 11000);
+    // }, []);
+    const [currentScreen, setCurrentScreen] = useState("second-load");
 
     return (
-        <div className="App">
-            {currentScreen === 0 ? <InitialLoad /> : null}
-        </div>
+        <CurrentScreenContext.Provider
+            value={[currentScreen, setCurrentScreen]}
+        >
+            <div className="App">
+                <Timer />
+                {currentScreen === "initial-load" ? <InitialLoad /> : null}
+                {currentScreen === "second-load" ? <SecondLoad /> : null}
+            </div>
+        </CurrentScreenContext.Provider>
     );
 }
 
