@@ -3,7 +3,6 @@ import Button from "../components/Button/Button";
 import Cube from "../components/cube/cube";
 import Skills from "../components/skills/skills";
 import Timer from "../components/timer/timer";
-import "./secondLoad.css";
 import { CurrentScreenContext } from "../App";
 
 const SecondLoad = () => {
