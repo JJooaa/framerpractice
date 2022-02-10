@@ -28,7 +28,6 @@ function App() {
             value={[currentScreen, setCurrentScreen]}
         >
             <div className="App">
-                <Timer />
                 {currentScreen === "initial-load" ? <InitialLoad /> : null}
                 {currentScreen === "second-load" ? <SecondLoad /> : null}
             </div>

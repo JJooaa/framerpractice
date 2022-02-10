@@ -14,7 +14,7 @@ const Cube = ({ isFinished, isCubeFinished }) => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2, type: "spring" }}
                     className="container"
-                    exit={{ y: "200vh" }}
+                    exit={{ x: "200vh" }}
                 >
                     <div className="cube">
                         <div className="face top"></div>

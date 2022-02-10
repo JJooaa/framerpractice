@@ -2,4 +2,9 @@
     position: absolute;
     width: 100px;
     height: 100px;
+    top: 20%;
+    right: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

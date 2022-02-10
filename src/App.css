@@ -65,6 +65,10 @@
     letter-spacing: 2px;
 }
 
+.shadow {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.803);
+}
+
 .profession {
     font-weight: 200;
     font-size: 2rem;

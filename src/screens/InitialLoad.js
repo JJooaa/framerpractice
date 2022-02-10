@@ -3,6 +3,7 @@ import Cube from "../components/cube/cube";
 import "../App.css";
 import Title from "../components/title/title";
 import { CurrentScreenContext } from "../App";
+import Timer from "../components/timer/timer";
 // This component will handle the timeout changes for its children components
 // basically animations for this screen
 
