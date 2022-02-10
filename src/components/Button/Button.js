@@ -3,11 +3,11 @@ import "./Button.css";
 import { CurrentScreenContext } from "../../App";
 import { motion } from "framer-motion";
 
-const Button = ({ delay }) => {
+const Button = ({ display, delay }) => {
     const [currentScreen, setCurrentScreen] = useContext(CurrentScreenContext);
 
     const handleClick = () => {
-        setCurrentScreen("initial-load");
+        setCurrentScreen(display);
     };
 
     const variants = {
@@ -24,7 +24,7 @@ const Button = ({ delay }) => {
             className="next-button"
             onClick={() => handleClick()}
         >
-            Next
+            Continue
         </motion.button>
     );
 };

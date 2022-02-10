@@ -23,10 +23,10 @@ const Skills = () => {
                 <motion.div
                     style={{ width: 1000 }}
                     className="shadow"
-                    initial={{ x: "200vh", opacity: 0 }}
+                    initial={{ opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 2, type: "spring", delay: 1 }}
-                    exit={{ x: "200vh" }}
+                    exit={{ opacity: 0 }}
                 >
                     <p style={{ fontWeight: 200, fontSize: "1.8rem" }}>
                         Self taught Web Developer who is in love with React.{" "}
@@ -41,10 +41,10 @@ const Skills = () => {
                 <motion.div
                     className="shadow"
                     style={{ width: 1000 }}
-                    initial={{ x: "200vh", opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 2, type: "spring", delay: 0.2 }}
-                    exit={{ x: "200vh" }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 2, type: "spring", delay: 1 }}
+                    exit={{ opacity: 0 }}
                 >
                     <p style={{ fontWeight: 200, fontSize: "1.8rem" }}>
                         My goal is to become really good at React <br />

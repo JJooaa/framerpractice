@@ -26,13 +26,31 @@ const Cube = ({ isFinished, isCubeFinished }) => {
                     </div>
                 </motion.div>
             ) : null}
-            {currentScreen === "second-load" && (
+            {currentScreen === "second-load" && isCubeFinished === false ? (
                 <motion.div
                     initial={{ x: "-200vh", opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 2, type: "spring" }}
                     className="container"
-                    exit={{ x: "-200vh" }}
+                    exit={{ x: "200vh" }}
+                >
+                    <div className="cube">
+                        <div className="face top"></div>
+                        <div className="face bottom"></div>
+                        <div className="face left"></div>
+                        <div className="face right"></div>
+                        <div className="face front"></div>
+                        <div className="face back"></div>
+                    </div>
+                </motion.div>
+            ) : null}
+            {currentScreen === "third-load" && (
+                <motion.div
+                    initial={{ x: "-200vh", opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 2, type: "spring" }}
+                    className="container"
+                    exit={{ x: "200vh" }}
                 >
                     <div className="cube">
                         <div className="face top"></div>

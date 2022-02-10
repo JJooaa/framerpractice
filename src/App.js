@@ -2,6 +2,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import InitialLoad from "./screens/InitialLoad";
 import SecondLoad from "./screens/secondLoad";
+import ThirdLoad from "./screens/thirdLoad";
 import { createContext } from "react";
 import Timer from "./components/timer/timer";
 
@@ -21,7 +22,7 @@ function App() {
     //         setCurrentScreen("somethingelse");
     //     }, 11000);
     // }, []);
-    const [currentScreen, setCurrentScreen] = useState("second-load");
+    const [currentScreen, setCurrentScreen] = useState("initial-load");
 
     return (
         <CurrentScreenContext.Provider
@@ -30,6 +31,7 @@ function App() {
             <div className="App">
                 {currentScreen === "initial-load" ? <InitialLoad /> : null}
                 {currentScreen === "second-load" ? <SecondLoad /> : null}
+                {currentScreen === "third-load" ? <ThirdLoad /> : null}
             </div>
         </CurrentScreenContext.Provider>
     );
