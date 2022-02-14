@@ -22,8 +22,8 @@ const Cube = ({ isCubeFinished, startingPosition, animatePosition }) => {
                     exit={{ x: "200vh" }}
                 >
                     <div className="cube">
-                        {array.map((item) => (
-                            <div className={item}></div>
+                        {array.map((item, index) => (
+                            <div className={item} key={index}></div>
                         ))}
                     </div>
                 </motion.div>
