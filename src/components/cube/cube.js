@@ -1,21 +1,16 @@
 import React, { useContext } from "react";
 import "./cube.css";
 import { motion, AnimatePresence } from "framer-motion";
-import { CurrentScreenContext } from "../../App";
 
 const Cube = ({ isCubeFinished, startingPosition, animatePosition }) => {
-    const [currentScreen, setCurrentScreen] = useContext(CurrentScreenContext);
-
-    // Make a single cube with props passed
-    // for reuseability
-
-    /* no need for current screen
-    isCubeFinished will be passed by parent
-    -- initial y and x: 
-    -- 
-    */
-    console.log(startingPosition);
-    console.log(isCubeFinished);
+    const array = [
+        "face top",
+        "face bottom",
+        "face left",
+        "face right",
+        "face front",
+        "face back",
+    ];
     return (
         <AnimatePresence>
             {!isCubeFinished && (
@@ -27,12 +22,9 @@ const Cube = ({ isCubeFinished, startingPosition, animatePosition }) => {
                     exit={{ x: "200vh" }}
                 >
                     <div className="cube">
-                        <div className="face top"></div>
-                        <div className="face bottom"></div>
-                        <div className="face left"></div>
-                        <div className="face right"></div>
-                        <div className="face front"></div>
-                        <div className="face back"></div>
+                        {array.map((item) => (
+                            <div className={item}></div>
+                        ))}
                     </div>
                 </motion.div>
             )}
