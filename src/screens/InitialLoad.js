@@ -5,32 +5,31 @@ import Title from "../components/title/title";
 import { CurrentScreenContext } from "../App";
 //import Timer from "../components/timer/timer";
 import Button from "../components/Button/Button";
-
+import FindMe from "../components/findme/findme";
 // This component will handle the timeout changes for its children components
 // basically animations for this screen
 
 export default function InitialLoad() {
     const [currentScreen, setCurrentScreen] = useContext(CurrentScreenContext);
     const [isFinished, setisFinished] = useState(false);
-
+    const [y, setY] = useState(false);
     // starts the cube exit animation before changing screen
     const [isCubeFinished, setIsCubeFinished] = useState(false);
 
-    useEffect(() => {
-        // first part where text starts to disappear
+    const nextScreen = () => {
+        setY(true);
         setTimeout(() => {
             setisFinished(true);
-        }, 7000);
+        }, 0);
         // start cube exit animation
         setTimeout(() => {
             setIsCubeFinished(true);
-        }, 11000);
+        }, 4100);
         // change screen
         setTimeout(() => {
             setCurrentScreen("second-load");
-        }, 11500);
-    }, [setCurrentScreen]);
-
+        }, 4500);
+    };
     return (
         <>
             {/* <Button delay={5} display={"second-load"} /> */}
@@ -48,11 +47,13 @@ export default function InitialLoad() {
                 <div style={{ width: 400, height: 400 }}>
                     <Cube
                         isCubeFinished={isCubeFinished}
-                        startingPosition={{ y: "-100vh", opacity: 0 }}
-                        animatePosition={{ y: 0, opacity: 1 }}
+                        startingPosition={{ x: "80vh", opacity: 0 }}
+                        animatePosition={{ x: 0, opacity: 1 }}
                     />
                 </div>
+                <Button nextScreen={nextScreen} />
             </div>
+            <FindMe y={y} />
         </>
     );
 }
