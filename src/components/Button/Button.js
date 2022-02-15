@@ -1,11 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Button.css";
-import { CurrentScreenContext } from "../../App";
 import { motion } from "framer-motion";
 
-const Button = ({ display, nextScreen }) => {
-    const [currentScreen, setCurrentScreen] = useContext(CurrentScreenContext);
-
+const Button = ({ nextScreen }) => {
     const variants = {
         initial: { opacity: 0 },
         animate: { opacity: 1 },

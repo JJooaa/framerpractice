@@ -17,18 +17,19 @@ export default function InitialLoad() {
     const [isCubeFinished, setIsCubeFinished] = useState(false);
 
     const nextScreen = () => {
-        setY(true);
+        // Start text exit animation
+        setisFinished(true);
         setTimeout(() => {
-            setisFinished(true);
-        }, 0);
+            setY(true);
+        }, 3600);
         // start cube exit animation
         setTimeout(() => {
             setIsCubeFinished(true);
-        }, 4100);
+        }, 4000);
         // change screen
         setTimeout(() => {
             setCurrentScreen("second-load");
-        }, 4500);
+        }, 5000);
     };
     return (
         <>
