@@ -22,7 +22,7 @@ function App() {
     //         setCurrentScreen("somethingelse");
     //     }, 11000);
     // }, []);
-    const [currentScreen, setCurrentScreen] = useState("second-load");
+    const [currentScreen, setCurrentScreen] = useState("initial-load");
 
     return (
         <CurrentScreenContext.Provider

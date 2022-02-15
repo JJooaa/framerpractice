@@ -5,6 +5,7 @@ import Title from "../components/title/title";
 import { CurrentScreenContext } from "../App";
 //import Timer from "../components/timer/timer";
 import Button from "../components/Button/Button";
+import Stars from "../components/stars/stars";
 import FindMe from "../components/findme/findme";
 // This component will handle the timeout changes for its children components
 // basically animations for this screen
@@ -44,6 +45,7 @@ export default function InitialLoad() {
                     gap: 100,
                 }}
             >
+                <Stars />
                 <Title isFinished={isFinished} />
                 <div style={{ width: 400, height: 400 }}>
                     <Cube

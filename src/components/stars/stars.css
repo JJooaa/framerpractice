@@ -1,0 +1,77 @@
+.star {
+    position: relative;
+    width: 3px;
+    height: 3px;
+    filter: blur(2px);
+    animation: starblink 3.5s ease infinite;
+}
+
+.one {
+    background: cyan;
+    top: 168px;
+    opacity: 0;
+    animation-delay: 2s;
+    left: 284px;
+}
+
+.two {
+    background: rgb(91, 60, 184);
+    top: 205px;
+    opacity: 0;
+    animation-delay: 1s;
+    left: 586px;
+}
+.three {
+    background: rgb(193, 29, 211);
+    top: 282px;
+    opacity: 0;
+    animation-delay: 3s;
+    left: 956px;
+}
+.four {
+    background: rgb(255, 0, 8);
+    top: 848px;
+    opacity: 0;
+    animation-delay: 2s;
+    left: 1200px;
+}
+.five {
+    background: rgb(27, 228, 17);
+    top: 818px;
+    opacity: 0;
+    animation-delay: 1s;
+    left: 505px;
+}
+.six {
+    background: cyan;
+    top: 669px;
+    opacity: 0;
+    animation-delay: 3s;
+    left: 1142px;
+}
+.seven {
+    background: rgb(15, 155, 242);
+    top: 541px;
+    opacity: 0;
+    animation-delay: 2s;
+    left: 353px;
+}
+.eigth {
+    background: rgb(255, 225, 0);
+    top: 200px;
+    opacity: 0;
+    animation-delay: 1s;
+    left: 1364px;
+}
+
+@keyframes starblink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

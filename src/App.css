@@ -13,11 +13,11 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(180deg, #141616, #2c2b58, #0b4d44);
+    background: linear-gradient(180deg, #0c0917, #0d2330);
     background-size: 600% 600%;
-    -webkit-animation: AnimationName 11s ease infinite;
-    -moz-animation: AnimationName 11s ease infinite;
-    animation: AnimationName 11s ease infinite;
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
