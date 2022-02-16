@@ -56,7 +56,7 @@ export default function InitialLoad() {
                 </div>
                 <Button nextScreen={nextScreen} />
             </div>
-            <FindMe y={y} />
+            <FindMe y={y} delay={4} />
         </>
     );
 }

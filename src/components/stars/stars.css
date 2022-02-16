@@ -1,67 +1,75 @@
 .star {
     position: relative;
-    width: 3px;
-    height: 3px;
-    filter: blur(2px);
-    animation: starblink 3.5s ease infinite;
+    width: 5px;
+    height: 5px;
+    filter: blur(3px);
+    animation: starblink 7s ease infinite;
 }
 
 .one {
-    background: cyan;
+    background: white;
     top: 168px;
     opacity: 0;
     animation-delay: 2s;
     left: 284px;
+    filter: blur(2px);
 }
 
 .two {
-    background: rgb(91, 60, 184);
+    background: white;
     top: 205px;
     opacity: 0;
     animation-delay: 1s;
     left: 586px;
+    filter: blur(2px);
 }
 .three {
-    background: rgb(193, 29, 211);
+    background: white;
     top: 282px;
     opacity: 0;
     animation-delay: 3s;
     left: 956px;
+    filter: blur(3px);
 }
 .four {
-    background: rgb(255, 0, 8);
+    background: white;
     top: 848px;
     opacity: 0;
-    animation-delay: 2s;
+    animation-delay: 5s;
     left: 1200px;
+    filter: blur(2px);
 }
 .five {
-    background: rgb(27, 228, 17);
+    background: white;
     top: 818px;
     opacity: 0;
     animation-delay: 1s;
     left: 505px;
+    filter: blur(3px);
 }
 .six {
-    background: cyan;
+    background: white;
     top: 669px;
     opacity: 0;
     animation-delay: 3s;
     left: 1142px;
+    filter: blur(2px);
 }
 .seven {
-    background: rgb(15, 155, 242);
+    background: white;
     top: 541px;
     opacity: 0;
-    animation-delay: 2s;
+    animation-delay: 6s;
     left: 353px;
+    filter: blur(2px);
 }
-.eigth {
-    background: rgb(255, 225, 0);
+.eight {
+    background: white;
     top: 200px;
     opacity: 0;
-    animation-delay: 1s;
-    left: 1364px;
+    animation-delay: 4s;
+    left: 1400px;
+    filter: blur(2px);
 }
 
 @keyframes starblink {
